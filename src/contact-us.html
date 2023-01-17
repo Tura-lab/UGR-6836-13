@@ -7,13 +7,77 @@
     <meta name="description" content="The best online shop!" />
     <link rel="stylesheet" href="contact-us.css" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <script src="validation.js" defer></script>
     <title>Contact us</title>
   </head>
   <body>
+    
+    <!-- Menu Icon -->
+    <div class="menuBar">
+      <img class="menu-button" src="images/menu-icon.png" alt="menu" height="30px" width="30px" onclick="openSidenav()"/>
+    </div>
+
+    <div class="sidenav" id="sidenav">
+      <span id="menuButton" class="sidenav-close-btn" onclick="closeSidenav()"
+        >&times;</span
+      >
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">ContactUs</a>
+      <a href="#">About</a>
+    </div>
+    <header>
+      <nav id="navBar">
+        <h2>Online Gebeya</h2>
+        <div class="nav-bar-left">
+          <!-- Nav bar -->
+          <ul>
+            <li><a href="/home.html"> Home</a></li>
+            |
+            <li><a href="/products.html"> Products</a></li>
+            |
+            <li><a href="/contact-us.html"> ContactUs</a></li>
+            |
+            <li><a href="/about.html"> About</a></li>
+            |
+          </ul>
+        </div>
+
+        <div class="nav-bar-right">
+          <!-- Search bar -->
+          <input
+            id="search"
+            type="text"
+            class="search-input"
+            placeholder="Search.."
+          />
+
+          <!-- Profile icon -->
+          <a href="sign-in.html">
+            <img
+              src="./images/profile-icon.svg"
+              alt="profile"
+              height="30px"
+              width="30px"
+            />
+          </a>
+
+          <!-- Theme Icon -->
+          <img
+            src="images/theme-icon.png"
+            alt="themes"
+            height="30px"
+            width="30px"
+          />
+        </div>
+      </nav>
+    </header>
     <!-- Main content -->
     <div class="contact-form-container">
       <div class="inner-container">
         <h1>Contact us</h1>
+        <div id="errors"></div>
         <div>
           <form action="#">
             <div class="upper-inputs">
@@ -31,12 +95,12 @@
               </div>
             </div>
 
-            <div class="textarea-div">
+            <div class="textarea-div" id="textarea">
               <label for="message">Message</label>
               <textarea id="message" placeholder="Enter message"></textarea>
             </div>
 
-            <button>Send Message</button>
+            <button id="submitButton">Send Message</button>
           </form>
         </div>
       </div>

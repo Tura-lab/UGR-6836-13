@@ -1,12 +1,10 @@
 const sidenav = document.getElementById("sidenav");
 const navBar = document.getElementById("navBar");
-const menuBar = document.getElementById("menuButton")
 
 if (document.body.clientWidth > 930) {
   navBar.style.visibility = "visible";
 }
 
-const menuButton = document.getElementById("menuButton");
 const containers = document.getElementsByClassName("home-texts-container");
 
 // Open sidenav menu
@@ -19,7 +17,6 @@ function openSidenav() {
   }
   document.body.style.backgroundColor = "rgba(0,0,0,0.6)";
   menuBar.style.backgroundColor = "rgba(0,0,0,0.6)";
-  for (let div of containers) div.style.backgroundColor = "rgba(0,0,0,0.6)";
 }
 
 // Close sidenav menu

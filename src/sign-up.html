@@ -7,44 +7,107 @@
     <meta name="description" content="The best online shop!" />
     <link rel="stylesheet" href="signup.css" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
     <title>Sign In</title>
+    <script src="validation.js" defer></script>
   </head>
   <body>
-    <header></header>
+    <!-- Menu Icon -->
+    <div class="menuBar">
+      <img class="menu-button" src="images/menu-icon.png" alt="menu" height="30px" width="30px" onclick="openSidenav()"/>
+    </div>
+
+    <!-- Sidenav menu -->
+    <div class="sidenav" id="sidenav">
+      <span id="menuButton" class="sidenav-close-btn" onclick="closeSidenav()"
+        >&times;</span
+      >
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">ContactUs</a>
+      <a href="#">About</a>
+    </div>
+    <header>
+      <nav id="navBar">
+        <h2>Online Gebeya</h2>
+        <div class="nav-bar-left">
+          <!-- Nav bar -->
+          <ul>
+            <li><a href="/home.html"> Home</a></li>
+            |
+            <li><a href="/products.html"> Products</a></li>
+            |
+            <li><a href="/contact-us.html"> ContactUs</a></li>
+            |
+            <li><a href="/about.html"> About</a></li>
+            |
+          </ul>
+        </div>
+
+        <div class="nav-bar-right">
+          <!-- Search bar -->
+          <input
+            id="search"
+            type="text"
+            class="search-input"
+            placeholder="Search.."
+          />
+
+          <!-- Profile icon -->
+          <a href="sign-in.html">
+            <img
+              src="./images/profile-icon.svg"
+              alt="profile"
+              height="30px"
+              width="30px"
+            />
+          </a>
+
+          <!-- Theme Icon -->
+          <img
+            src="images/theme-icon.png"
+            alt="themes"
+            height="30px"
+            width="30px"
+          />
+        </div>
+      </nav>
+    </header>
 
     <!-- Main content -->
     <div class="signup-upper-container">
       <div class="signup-container">
         <h1>Sign Up</h1>
+        <div id="errors"></div>
         <form action="">
           <div>
             <label for="firstname">First name</label>
-            <input id="firstname" type="text" />
+            <input id="firstname" type="text" required />
           </div>
           <div>
             <label for="lastname">Last name</label>
-            <input id="lastname" type="text" />
+            <input id="lastname" type="text" required />
           </div>
           <div>
             <label for="email">Email</label>
-            <input id="email" type="text" />
+            <input id="email" type="text" required />
           </div>
           <div>
             <label for="phone">Phone Number</label>
-            <input id="phone" type="number" />
+            <input id="phone" type="number" required />
           </div>
           <div>
             <label for="password">Enter password</label>
-            <input id="password" type="password" />
+            <input id="password" type="password" required />
           </div>
           <div>
             <label for="verify-password">Verify Password</label>
-            <input id="verify-password" type="password" />
+            <input id="verify-password" type="password" required />
           </div>
 
           <div class="bottom-btns">
-            <a href="/sign-in.html">Aready have an account?</a>
-            <button>Sign Up</button>
+            <a href="/sign-in.html">Already have an account?</a>
+            <button id="submitButton">Sign Up</button>
           </div>
         </form>
       </div>

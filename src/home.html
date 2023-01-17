@@ -12,7 +12,7 @@
 
   <body>
     <!-- Menu Icon -->
-    <img src="images/menu-icon.png" alt="menu" height="30px" width="30px" onclick="openSidenav()"/>
+    <img class="menu-button" src="images/menu-icon.png" alt="menu" height="30px" width="30px" onclick="openSidenav()"/>
 
     <!-- Sidenav menu -->
     <div class="sidenav" id="sidenav">
@@ -25,6 +25,50 @@
       <a href="#">About</a>
     </div>
     <header>
+      <nav id="navBar">
+        <h2>Online Gebeya</h2>
+        <div class="nav-bar-left">
+          <!-- Nav bar -->
+          <ul>
+            <li><a href="/home.html"> Home</a></li>
+            |
+            <li><a href="/products.html"> Products</a></li>
+            |
+            <li><a href="/contact-us.html"> ContactUs</a></li>
+            |
+            <li><a href="/about.html"> About</a></li>
+            |
+          </ul>
+        </div>
+
+        <div class="nav-bar-right">
+          <!-- Search bar -->
+          <input
+            id="search"
+            type="text"
+            class="search-input"
+            placeholder="Search.."
+          />
+
+          <!-- Profile icon -->
+          <a href="sign-in.html">
+            <img
+              src="./images/profile-icon.svg"
+              alt="profile"
+              height="30px"
+              width="30px"
+            />
+          </a>
+
+          <!-- Theme Icon -->
+          <img
+            src="images/theme-icon.png"
+            alt="themes"
+            height="30px"
+            width="30px"
+          />
+        </div>
+      </nav>
     </header>
 
     <!-- Top -->
@@ -42,6 +86,7 @@
       </div>
     </div>
 
+    <!-- Main content -->
     <div class="home-texts-container">
       <div class="home-texts first">
         <div class="left">
