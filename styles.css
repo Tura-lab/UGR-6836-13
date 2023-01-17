@@ -1,0 +1,293 @@
+@import url("https://fonts.cdnfonts.com/css/poppins");
+
+html {
+  font-family: "Poppins";
+}
+
+input {
+  outline: 1px grey solid;
+  border:none;
+}
+
+header {
+  display: unset;
+}
+
+nav,
+.nav-bar-left,
+.nav-bar-right,
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-bar-right {
+  text-align: center;
+}
+
+.nav-bar-left {
+  font-size: 1.4em;
+}
+
+.menuBar, nav {
+  justify-content: space-between;
+  position: sticky;
+  background-color: white;
+  top: 0;
+}
+
+.sidenav {
+  background-color: white;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  width: max-content;
+  list-style: none;
+  justify-content: space-around;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+ul {
+  width: 100%;
+  height: 100%;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav li {
+  padding: 0 1em;
+  border-bottom: 2px solid white;
+  transition: border 100ms 100ms;
+}
+
+nav li:hover {
+  border-bottom: 2px solid green;
+}
+
+.search-input {
+  margin-right: 4px;
+  margin-left: 1em;
+}
+
+.home-top-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.home-top-buttons button {
+  transition: transform 100ms 100ms;
+  margin-right: 1.5em;
+  width: 12em;
+  outline: none;
+  border-radius: 1em;
+  height: 3em;
+  border: none;
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.home-top-buttons button:hover {
+  transform: scale(1.1, 1.2);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.home-top {
+  color: black;
+  font-size: 2em;
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 2.4em;
+}
+
+.home-texts-container {
+  display: flex;
+  justify-content: center;
+}
+
+.home-texts-container img {
+  border-radius: 2em;
+}
+
+.home-texts {
+  display: flex;
+  max-width: 80%;
+  align-items: center;
+  gap: 2em;
+  font-size: 1.6em;
+}
+
+.home-texts .left {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.rtl-text {
+  direction: rtl;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-texts {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 90%;
+  gap: 2em;
+}
+
+.third {
+  margin-bottom: 2em;
+}
+
+.home-texts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-texts-container img {
+  width: 40%;
+}
+
+@media screen and (max-width: 1200px) {
+  
+  .home-texts {
+    font-size: 1.2em;
+  }
+}
+
+.menu-button {
+  display: none;
+}
+
+@media screen and (max-width: 930px) {
+  nav {
+    display: none;
+  }
+
+  .menu-button {
+    display: initial;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  audio {
+    max-width: 300px;
+  }
+
+  .home-texts {
+    flex-direction: column;
+  }
+
+  .second {
+    flex-direction: column-reverse;
+  }
+
+  .home-texts-container img {
+    width: 100%;
+  }
+
+  .home-texts .left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .rtl-text {
+    direction: initial;
+  }
+  .home-top-buttons {
+    justify-content: center;
+  }
+
+  .home-top-buttons button {
+    width: 9em;
+  }
+}
+
+/* For the hidden sidenav menu */
+.sidenav {
+  display: flex;
+  flex-direction: column;
+  height: 23em;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 1em;
+  transition: 400ms 300ms;
+}
+
+.sidenav a{
+  display: block;
+  margin: 1em;
+  text-decoration: none;
+  padding-left: .5em;
+  transition: 400ms;
+}
+
+.sidenav a:hover {
+  border-left: 1em rgb(158, 158, 255) solid;
+}
+
+.sidenav-close-btn {
+  font-size: 3em;
+}
+
+.sidenav-close-btn:hover {
+  cursor: pointer;
+}
+
+.close-container {
+  display: flex;
+  flex-direction: row-reverse;
+  padding-right: .4em;
+}
+
+#menuButton {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+}
+
+#menuButton span {
+  margin-left: 1em;
+}
+
+audio {
+  width: 800px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+#errors {
+  background-color: red;
+  margin: 0;
+  padding: 0;
+}
